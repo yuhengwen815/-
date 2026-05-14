@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好友专属点单系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 好友专属点单系统 🎉</h1>
+            <p class="subtitle">为你精心准备的点单服务</p>
+        </header>
+
+        <main>
+            <!-- 分类导航 -->
+            <nav class="category-nav">
+                <button class="nav-btn active" data-category="food">🍔 吃喝类</button>
+                <button class="nav-btn" data-category="game">🎮 游戏类</button>
+                <button class="nav-btn" data-category="life">🛒 生活类</button>
+            </nav>
+
+            <!-- 菜单展示区 -->
+            <section class="menu-section">
+                <h2 class="section-title">菜单</h2>
+                <div id="menu-container" class="menu-grid">
+                    <!-- 菜单项将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <!-- 购物车 -->
+            <section class="cart-section">
+                <h2 class="section-title">🛒 购物车</h2>
+                <div id="cart-container" class="cart-items">
+                    <p class="empty-cart">购物车是空的</p>
+                </div>
+                <div class="cart-total">
+                    <span>总计：</span>
+                    <span id="total-price">¥0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" disabled>结算</button>
+            </section>
+        </main>
+
+        <!-- 结算弹窗 -->
+        <div id="checkout-modal" class="modal">
+            <div class="modal-content">
+                <h2>✅ 订单确认</h2>
+                <div id="order-summary" class="order-summary">
+                    <!-- 订单详情 -->
+                </div>
+                <div class="modal-actions">
+                    <button id="confirm-checkout" class="confirm-btn">确认支付</button>
+                    <button id="close-modal" class="close-btn">关闭</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成功提示 -->
+        <div id="success-toast" class="toast">
+            <span>✅ 订单已成功提交！</span>
+        </div>
+
+        <!-- 分享弹窗 -->
+        <div id="share-modal" class="modal">
+            <div class="modal-content">
+                <h2>📤 分享订单给好友</h2>
+                <div class="share-section">
+                    <h3>方式一：复制订单文本</h3>
+                    <p class="share-desc">复制后粘贴到微信、邮件等</p>
+                    <textarea id="order-text" class="order-textarea" readonly></textarea>
+                    <button id="copy-order" class="copy-btn">📋 复制订单文本</button>
+                </div>
+                <div class="share-section">
+                    <h3>方式二：分享链接</h3>
+                    <p class="share-desc">发送链接给好友，好友打开即可看到订单</p>
+                    <input type="text" id="share-link" class="share-link-input" readonly>
+                    <button id="copy-link" class="copy-btn">🔗 复制分享链接</button>
+                </div>
+                <button id="close-share" class="close-btn" style="width:100%;margin-top:15px;">关闭</button>
+            </div>
+        </div>
+
+        <!-- 通用提示 -->
+        <div id="toast-message" class="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
