@@ -1,9 +1,9 @@
 // 菜单数据
 const menuData = {
     food: [
-        { id: 1, name: '奶茶', emoji: '🧋', price: 15 },
+        { id: 1, name: '奶茶', emoji: '\u{1F95B}', price: 15 },
         { id: 2, name: '咖啡', emoji: '☕', price: 20 },
-        { id: 3, name: '汉堡', emoji: '🍔', price: 25 },
+        { id: 3, name: '面条', emoji: '\u{1F35C}', price: 25 },
         { id: 4, name: '披萨', emoji: '🍕', price: 45 },
         { id: 5, name: '炸鸡', emoji: '🍗', price: 30 },
         { id: 6, name: '冰淇淋', emoji: '🍦', price: 12 },
